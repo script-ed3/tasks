@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Nunito:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #EFEFEF;
+  color: #1A1A1A;
+  transition: background-color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1A1A1A;
+  color: #EFEFEF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quintessential', serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+a {
+  transition: color 0.3s ease;
+}
+
+button {
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input, textarea, select {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #DCD6CD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1BEB0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C1AE9E;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: slideUp 0.6s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.pulse-slow {
+  animation: pulseSoft 3s ease-in-out infinite;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border: 1px solid #DCD6CD;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.08);
+  border-color: #D1BEB0;
+}
+
+.card.dark {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+}
+
+/* Button variants */
+.btn-primary {
+  background: #D1BEB0;
+  color: #1A1A1A;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+  background: #C1AE9E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(209, 190, 176, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #1A1A1A;
+  border: 2px solid #D1BEB0;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+  background: #F8F3EA;
+  border-color: #C1AE9E;
+}
+
+/* Form elements */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #DCD6CD;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #D1BEB0;
+  box-shadow: 0 0 0 3px rgba(209, 190, 176, 0.1);
+}
+
+.input-field.dark {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #EFEFEF;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #DCD6CD;
+  border-top-color: #D1BEB0;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Alert boxes */
+.alert {
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.alert-success {
+  background: #E8F5E9;
+  border-left: 4px solid #4CAF50;
+  color: #2E7D32;
+}
+
+.alert-error {
+  background: #FFEBEE;
+  border-left: 4px solid #F44336;
+  color: #C62828;
+}
+
+.alert-info {
+  background: #E3F2FD;
+  border-left: 4px solid #2196F3;
+  color: #1565C0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
